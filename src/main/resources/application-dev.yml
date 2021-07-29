@@ -1,0 +1,30 @@
+server:
+  port: 8056
+  compression:
+    enabled: true
+
+spring:
+  main:
+    allow-bean-definition-overriding: true
+  jackson:
+    date-format: "dd/MM/yyyy"
+    time-zone: ${app.settings.timezone}
+    serialization:
+      write_dates_as_timestamps: false
+  output:
+    ansi:
+      enabled: always
+
+token:
+  signer:
+    secret: <value>
+
+app:
+  settings:
+    timezone: Europe/Athens
+
+icarus:
+  pae:
+    url: <value>
+  server:
+    url: <value>
